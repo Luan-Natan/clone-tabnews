@@ -1,3 +1,6 @@
+# JS
 .next
 node_modules
+
+# VS
 .vscode
