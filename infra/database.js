@@ -1,11 +1,6 @@
 import { Client } from "pg";
-import fs from "fs";
-import path from "path";
 
 async function query(queryObject) {
-  const certPath = path.resolve("./certs/prod-ca-2021.crt");
-  const ca = fs.readFileSync(certPath, "utf8");
-
   const client = new Client({
     host: process.env.POSTGRES_HOST,
     port: process.env.POSTGRES_PORT,
